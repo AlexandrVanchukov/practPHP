@@ -28,14 +28,14 @@
 <?php
 	// блок инициализации
 	try {
-		$pdoSet = new PDO('mysql:dbname=test;host=localhost', 'root', '');
+		$pdoSet = new PDO('mysql:dbname=bank;host=localhost', 'root', '');
 		$pdoSet->query('SET NAMES utf8;');
 	} catch (PDOException $e) {
 		print "Error!: " . $e->getMessage() . "<br/>";
 		die();
 	}
 	// название столбцов.
-	$sql = "SHOW COLUMNS FROM myarttable";
+	$sql = "SHOW COLUMNS FROM Persons";
 //echo $sql;
 	$stmt = $pdoSet->query($sql);
 	$resultMF = $stmt->fetchAll();
@@ -48,7 +48,7 @@
 			</tr>	
 
 <?php 
-	$sql = "SELECT * FROM myarttable WHERE id>14 ORDER BY id ASC";  // ASC - по возрастанию; DESC - по убыванию.
+	$sql = "SELECT * FROM Persons ORDER BY id ASC";  // ASC - по возрастанию; DESC - по убыванию.
 //echo $sql;
 	$stmt = $pdoSet->query($sql);
 	$resultMF = $stmt->fetchAll();

@@ -33,7 +33,7 @@
 			<tr>
 				<?php
 				include "data/init.php";	
-				$sql = "SHOW COLUMNS FROM myarttable";
+				$sql = "SHOW COLUMNS FROM Persons";
 				$stmt = $pdoSet->query($sql);
 				$resultMFcols = $stmt->fetchAll();
 
@@ -46,7 +46,7 @@
 				
 			</tr>
 			</table>
-			<p style="font-size:12px;"><i>(в базу <b>test</b>, таблицу <b>myarttable</b> в MySQL)</i></p>
+			<p style="font-size:12px;"><i>(в базу <b>bank</b>, таблицу <b>Persons</b> в MySQL)</i></p>
 			<hr />
 		</form>
 		<!-- КОНЕЦ форма добавления ВСПЛЫВАЮЩИЕ СТРОКИ -->
@@ -86,7 +86,6 @@
 				?>
 				
 				<td class='actRt' title="Отредактировать"><a href="#" class="js-open-modal" data-modal="1" id="id<?php echo $iR .'_'. $resultMF[$iC][0];?>"><img src="image/edit.ico"></a></td>
-				<td class='actRt' title="Добавить файлы"><a href="practUpload/index.php?id=<?php echo $resultMF[$iC][0]; ?>"><img src="image/files.ico"></a></td>
 				<td class='actRt' title="Удалить"><a href="index.php?delid=<?php echo $resultMF[$iC][0]; ?>"><img src="image/delete.ico"></a></td><?php
 				?></tr><?php
 			} ?>
