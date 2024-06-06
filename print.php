@@ -18,7 +18,7 @@
 			<form action="" method="get">
 			<table class="c2">
 				<tr>
-					<td class="c2">Печать таблицы<br />myarttable из MySQL<br /></td>
+					<td class="c2">Печать таблицы<br />Person из MySQL<br /></td>
 				</tr>
 			</table>
 			
